@@ -12,7 +12,6 @@ public class ComputadorPedrinho {
 			smi = new FacebookMessenger();
 		else if(appEscolhido.equals("tlg"))
 			smi = new Telegram();
-		
 			
 		smi.enviarMensagem();
 		smi.receberMensagem();
