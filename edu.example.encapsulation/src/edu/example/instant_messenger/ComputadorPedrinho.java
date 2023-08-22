@@ -2,36 +2,19 @@ package edu.example.instant_messenger;
 
 public class ComputadorPedrinho {
 	public static void main(String[] args) {
-		MSNMessenger msn = new MSNMessenger();
-		FacebookMessenger fb = new FacebookMessenger();
-		fb.coletarDados();
-		Telegram tel = new Telegram();
 		
-		fb.coletarDados();
-		msn.enviarMensagem();
-		fb.coletarDados();
-		msn.receberMensagem();
-		msn.tremerTela();
+		ServicoMensagemInstantanea smi = null;
+		String appEscolhido="msc"; 
 		
-		fb.coletarDados();
-		fb.enviarMensagem();
-		fb.coletarDados();
-		fb.receberMensagem();
-		fb.coletarDados();
+		if(appEscolhido.equals("msn"))
+			smi = new MSNMessenger();
+		else if(appEscolhido.equals("fbm"))
+			smi = new FacebookMessenger();
+		else if(appEscolhido.equals("tlg"))
+			smi = new Telegram();
 		
-		fb.coletarDados();
-		tel.enviarMensagem();
-		fb.coletarDados();
-		tel.receberMensagem();
-		fb.coletarDados();
-		tel.criarSuperGrupo();
-		fb.coletarDados();
-		
-		fb.coletarDados();
-		fb.coletarDados();
-		fb.coletarDados();
-		fb.coletarDados();
-		fb.coletarDados();
-		fb.coletarDados();
+			
+		smi.enviarMensagem();
+		smi.receberMensagem();
 	}
 }
